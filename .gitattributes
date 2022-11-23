@@ -11,3 +11,6 @@
 *.svg  eol=lf
 *.xml  eol=lf
 ib_buffer_pool  eol=lf
+# SQL Server files
+*.mdf
+*.ldf
