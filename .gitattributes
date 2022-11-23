@@ -10,3 +10,4 @@
 *.md   eol=lf
 *.svg  eol=lf
 *.xml  eol=lf
+ib_buffer_pool  eol=lf
