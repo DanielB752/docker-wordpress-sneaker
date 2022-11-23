@@ -1,16 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-
-*.htaccess eol=lf
-*.cnf  eol=lf
-*.html eol=lf
-*.js   eol=lf
-*.json eol=lf
-*.less eol=lf
-*.md   eol=lf
-*.svg  eol=lf
-*.xml  eol=lf
-ib_buffer_pool  eol=lf
-# SQL Server files
-*.mdf
-*.ldf
