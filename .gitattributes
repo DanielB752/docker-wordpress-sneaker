@@ -2,6 +2,7 @@
 * text=auto
 
 *.htaccess eol=lf
+*.cnf  eol=lf
 *.html eol=lf
 *.js   eol=lf
 *.json eol=lf
