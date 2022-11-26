@@ -77,11 +77,9 @@ img
 /* ### HEADER ### */
 header
 {
-    width: 100%;
-    height: var(--spacing-xl);
     background-color: var(--white);
-    margin-bottom: var(--spacing-m);
     box-shadow: 0px var(--spacing-s) var(--spacing-s) 0px var(--box-shadow);
+    padding: var(--spacing-s)
 }
 
 .header-container
@@ -104,26 +102,75 @@ header
     max-width: 70%;
 }
 
-.header-navigation-wrapper
+.desktop-navigation-wrapper
 {
     list-style: none;
 }
 
-.header-navigation-wrapper li
+.desktop-navigation-wrapper li
 {
     display: inline-block;
-}
-
-.header-navigation-wrapper > li
-{
     margin-left: var(--spacing-m);
 }
 
-.header-navigation-wrapper li a
+.desktop-navigation-wrapper li a
 {
     text-decoration: none;
     color: var(--black);
     font-weight: 500;
+}
+
+.mobile-menu-container
+{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.mobile-navigation-wrapper
+{
+    list-style: none;
+    background-color: var(--background);
+    border-top: solid 1px var(--black);
+}
+
+.mobile-navigation-wrapper li
+{
+    padding: var(--spacing-s);
+    text-align: right;
+}
+
+.mobile-navigation-wrapper li a
+{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+}
+  
+.bar1, .bar2, .bar3
+{
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+/* Rotate first bar */
+.change .bar1
+{
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2
+{
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3
+{
+    transform: translate(0, -11px) rotate(45deg);
 }
 
 /* ### HOME ### */

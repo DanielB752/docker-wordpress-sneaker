@@ -15,25 +15,70 @@
 				<h1>Testlogo</h1>
 			</div>
 			<div class="menu">
-				<nav class="header-navigation">
-					<ul class="header-navigation-wrapper">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'primary',
-								'items_wrap'     => '%3$s',
-								'container'      => false,
-								'depth'          => 1,
-								'link_before'    => '<span>',
-								'link_after'     => '</span>',
-								'fallback_cb'    => false,
-							)
-						);
+				<?php 
+					if (wp_is_mobile())
+					{
 						?>
-					</ul><!-- .footer-navigation-wrapper -->
-				</nav><!-- .footer-navigation -->
+							<div class="mobile-menu">
+								<div class="mobile-menu-container" onclick="swapMenuIcon(this)">
+									<div class="bar1"></div>
+									<div class="bar2"></div>
+									<div class="bar3"></div>
+								</div>	
+							</div>
+						<?php
+					} 
+					else
+					{
+						?>
+							<nav>
+								<ul class="desktop-navigation-wrapper">
+									<?php
+										wp_nav_menu(
+											array(
+												'theme_location' => 'primary',
+												'items_wrap'     => '%3$s',
+												'container'      => false,
+												'depth'          => 1,
+												'link_before'    => '<span>',
+												'link_after'     => '</span>',
+												'fallback_cb'    => false,
+											)
+										);
+									?>
+								</ul>
+							</nav>
+						<?php	
+					}
+				?>
 			</div>
 		</div>
 	</header>
+		<?php 
+			if (wp_is_mobile())
+			{
+				?>
+					<nav>
+						<div class="mobile-menu-dropout">
+							<ul class="mobile-navigation-wrapper">
+								<?php
+									wp_nav_menu(
+										array(
+											'theme_location' => 'primary',
+											'items_wrap'     => '%3$s',
+											'container'      => false,
+											'depth'          => 1,
+											'link_before'    => '<span>',
+											'link_after'     => '</span>',
+											'fallback_cb'    => false,
+										)
+									);
+								?>
+							</ul>
+						</div>
+					</nav>
+				<?php
+			}
+		?>
 	<body>
 		<div class="site-content">
