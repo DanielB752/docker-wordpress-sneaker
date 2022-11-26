@@ -1,0 +1,163 @@
+/* ### ROOT ### */
+
+:root
+{
+    --black: #080808;
+    --white: #ffffff;
+
+    --background: #f1f5f7;
+    --box-shadow: #0808080a;
+
+    --cat1: #0F4C75;
+    --cat2: #3282B8;
+    --cat3: #1FAB89;
+
+    --spacing-s: 1rem;
+    --spacing-m: 2rem;
+    --spacing-l: 4rem;
+    --spacing-xl: 6rem;
+    --spacing-xxl: 8rem;
+
+    --max-width: 1000px;
+}
+
+/* ### NORMALIZE ### */
+
+html *
+{
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: calc(1ex / 0.32);
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: var(--background);
+    font-kerning: auto;
+}
+
+/* ### GENERAL ### */
+
+.site-content
+{
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1
+{
+    font-size: 3rem;
+}
+
+h2
+{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+h3
+{
+    font-size: 1.5rem;
+}
+
+p
+{
+    font-size: 1rem;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ### HEADER ### */
+header
+{
+    width: 100%;
+    height: var(--spacing-xl);
+    background-color: var(--white);
+    margin-bottom: var(--spacing-m);
+    box-shadow: 0px var(--spacing-s) var(--spacing-s) 0px var(--box-shadow);
+}
+
+.header-container
+{
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.logo
+{
+    max-width: 30%;
+}
+
+.menu
+{
+    max-width: 70%;
+}
+
+.header-navigation-wrapper
+{
+    list-style: none;
+}
+
+.header-navigation-wrapper li
+{
+    display: inline-block;
+}
+
+.header-navigation-wrapper > li
+{
+    margin-left: var(--spacing-m);
+}
+
+.header-navigation-wrapper li a
+{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+}
+
+/* ### HOME ### */
+
+.home-cat-heading-container
+{
+    background-color: var(--cat1);
+    color: var(--white);
+    padding: var(--spacing-s);
+    margin-bottom: var(--spacing-m);
+}
+
+.home-top-post-thumbnail
+{
+    padding: var(--spacing-s);
+    background-color: var(--white);
+}
+
+.home-top-post-content
+{
+    background-color: var(--white);
+    padding: var(--spacing-s);
+
+    margin-bottom: var(--spacing-m);
+}
+
+.home-other-post-content
+{
+    background-color: var(--white);
+    padding: var(--spacing-s);
+}
+
+.home-other-post-content + .home-other-post-content
+{
+    margin-top: var(--spacing-m);
+}
+
