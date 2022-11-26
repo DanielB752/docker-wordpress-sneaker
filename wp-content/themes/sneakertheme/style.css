@@ -12,6 +12,7 @@
     --cat2: #3282B8;
     --cat3: #1FAB89;
 
+    --spacing-xs: 0.5rem;
     --spacing-s: 1rem;
     --spacing-m: 2rem;
     --spacing-l: 4rem;
@@ -49,7 +50,7 @@ body
 
 h1
 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 h2
@@ -94,12 +95,18 @@ header
 
 .logo
 {
-    max-width: 30%;
+    max-width: 50%;
+}
+
+.logo a img
+{
+    height: 3rem;
+    width: auto;
 }
 
 .menu
 {
-    max-width: 70%;
+    max-width: 50%;
 }
 
 .desktop-navigation-wrapper
@@ -122,14 +129,17 @@ header
 
 .mobile-menu-container
 {
-    display: inline-block;
+    position: relative;
+    width: calc(var(--spacing-l) - var(--spacing-s));
+    height: calc(var(--spacing-l) - var(--spacing-s));
     cursor: pointer;
 }
 
 .mobile-navigation-wrapper
 {
+    display: none;
     list-style: none;
-    background-color: var(--background);
+    background-color: var(--white);
     border-top: solid 1px var(--black);
 }
 
@@ -148,17 +158,33 @@ header
   
 .bar1, .bar2, .bar3
 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
+    width: 100%;
+    height: var(--spacing-xs);
+    background-color: var(--black);
+    transition: 0.25s;
+    position: absolute;
+    display: block;
+}
+
+.bar1
+{
+    top: 0rem;
+}
+
+.bar2
+{
+    top: 1.25rem;
+}
+
+.bar3
+{
+    top: 2.5rem;
 }
   
 /* Rotate first bar */
 .change .bar1
 {
-    transform: translate(0, 11px) rotate(-45deg);
+    transform: translate(0, 1.25rem) rotate(-45deg);
 }
 
 /* Fade out the second bar */
@@ -170,7 +196,7 @@ header
 /* Rotate last bar */
 .change .bar3
 {
-    transform: translate(0, -11px) rotate(45deg);
+    transform: translate(0, -1.25rem) rotate(45deg);
 }
 
 /* ### HOME ### */
@@ -181,6 +207,7 @@ header
     color: var(--white);
     padding: var(--spacing-s);
     margin-bottom: var(--spacing-m);
+    margin-top: var(--spacing-m);
 }
 
 .home-top-post-thumbnail
@@ -206,5 +233,10 @@ header
 .home-other-post-content + .home-other-post-content
 {
     margin-top: var(--spacing-m);
+}
+
+.home-infobox
+{
+    padding: var(--spacing-s);
 }
 

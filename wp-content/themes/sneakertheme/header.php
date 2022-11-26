@@ -12,7 +12,7 @@
 	<header>
 		<div class="header-container">
 			<div class="logo">
-				<h1>Testlogo</h1>
+				<?php the_custom_logo() ?>
 			</div>
 			<div class="menu">
 				<?php 
@@ -20,7 +20,7 @@
 					{
 						?>
 							<div class="mobile-menu">
-								<div class="mobile-menu-container" onclick="swapMenuIcon(this)">
+								<div id="nav-icon" class="mobile-menu-container" onclick="swapMenuIcon(this)">
 									<div class="bar1"></div>
 									<div class="bar2"></div>
 									<div class="bar3"></div>
