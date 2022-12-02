@@ -10,7 +10,7 @@
     <!-- ### ANLEITUNGEN ### -->
 
     <div class="home-cat-heading-container">
-        <h2>Anleitungen</h2>
+        <h2>Aktuelle Anleitungen</h2>
     </div>
     <?php
         $args = array(
@@ -54,10 +54,7 @@
                                             <div class="home-top-post-tags">
                                                 <span class="home-top-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
                                                 <span class="home-top-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Redaktion: " . get_field('redaktionsbewertung'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Nutzer: " . get_field('nutzerbewertung'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Equipment: " . get_field('benotigtes_equipment'); ?> </span>
-                                                <?php echo get_the_tag_list('<span>#', '</span><p> | </p><span>#', '</span>'); ?>
+                                                <span class="home-top-post-tag"> <?php echo "Equipment: " . implode(', ', get_field('benotigtes_equipment')); ?> </span>
                                             </div>
                                             <div class="home-top-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
@@ -78,12 +75,10 @@
                                             <div class="home-other-post-title">
                                                 <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
                                             </div>
-                                            <div class="home-other-post-tags">
-                                                <span class="home-other-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
-                                                <span class="home-other-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
-                                                <span class="home-other-post-tag"> <?php echo "Redaktion: " . get_field('redaktionsbewertung'); ?> </span>
-                                                <span class="home-other-post-tag"> <?php echo "Nutzer: " . get_field('nutzerbewertung'); ?> </span>
-                                                <span class="home-other-post-tag"> <?php echo "Equipment: " . get_field('benotigtes_equipment'); ?> </span>
+                                            <div class="home-top-post-tags">
+                                                <span class="home-top-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "Equipment: " . implode(', ', get_field('benotigtes_equipment')); ?> </span>
                                             </div>
                                             <div class="home-other-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
@@ -104,7 +99,7 @@
     <!-- ### GADGETS ### -->
 
     <div class="home-cat-heading-container">
-        <h2>Gadgets</h2>
+        <h2>Die neuesten Gadgets</h2>
     </div>
     <?php
         $args = array(
@@ -129,7 +124,7 @@
 
                             if($post_counter === 1)
                             {
-                                ?>                                
+                                ?>
                                     <div class="home-top-post">
                                         <div class="home-top-post-thumbnail">
                                             <a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a>
@@ -146,12 +141,9 @@
                                             </div>
                                         <div class="home-top-post-content">                                        
                                             <div class="home-top-post-tags">
-                                                <span class="home-top-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Redaktion: " . get_field('redaktionsbewertung'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Nutzer: " . get_field('nutzerbewertung'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Equipment: " . get_field('benotigtes_equipment'); ?> </span>
-                                                <?php echo get_the_tag_list('<span>#', '</span><p> | </p><span>#', '</span>'); ?>
+                                                <span class="home-top-post-tag"> <?php echo get_field('selbst_getestet'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "€: " . get_field('preis'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "Mein Eindruck: " . get_field('mein_eindruck'); ?> </span>
                                             </div>
                                             <div class="home-top-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
@@ -164,22 +156,22 @@
                             else
                             {
                                 ?>
-                                    <div class="home-other-post-content">
-                                        <div class="home-other-post-pre-title">
-                                            <a href="<?php the_permalink();?>"><?php the_field('zwischenuberschrift'); ?></a>
-                                        </div>
-                                        <div class="home-other-post-title">
-                                            <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
-                                        </div>
-                                        <div class="home-other-post-tags">
-                                            <span class="home-other-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
-                                            <span class="home-other-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
-                                            <span class="home-other-post-tag"> <?php echo "Redaktion: " . get_field('redaktionsbewertung'); ?> </span>
-                                            <span class="home-other-post-tag"> <?php echo "Nutzer: " . get_field('nutzerbewertung'); ?> </span>
-                                            <span class="home-other-post-tag"> <?php echo "Equipment: " . get_field('benotigtes_equipment'); ?> </span>
-                                        </div>
-                                        <div class="home-other-post-excerpt">
-                                            <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
+                                    <div class="home-other-post-container">
+                                        <div class="home-other-post-content">
+                                            <div class="home-other-post-pre-title">
+                                                <a href="<?php the_permalink();?>"><?php the_field('zwischenuberschrift'); ?></a>
+                                            </div>
+                                            <div class="home-other-post-title">
+                                                <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
+                                            </div>
+                                            <div class="home-top-post-tags">
+                                                <span class="home-top-post-tag"> <?php echo get_field('selbst_getestet'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "€: " . get_field('preis'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "Mein Eindruck: " . get_field('mein_eindruck'); ?> </span>
+                                            </div>
+                                            <div class="home-other-post-excerpt">
+                                                <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
+                                            </div>
                                         </div>
                                     </div>
                                 <?php
@@ -238,11 +230,6 @@
                                             </div>
                                         <div class="home-top-post-content">                                        
                                             <div class="home-top-post-tags">
-                                                <span class="home-top-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Redaktion: " . get_field('redaktionsbewertung'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Nutzer: " . get_field('nutzerbewertung'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Equipment: " . get_field('benotigtes_equipment'); ?> </span>
                                             </div>
                                             <div class="home-top-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
@@ -263,11 +250,6 @@
                                             <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
                                         </div>
                                         <div class="home-other-post-tags">
-                                            <span class="home-other-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
-                                            <span class="home-other-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
-                                            <span class="home-other-post-tag"> <?php echo "Redaktion: " . get_field('redaktionsbewertung'); ?> </span>
-                                            <span class="home-other-post-tag"> <?php echo "Nutzer: " . get_field('nutzerbewertung'); ?> </span>
-                                            <span class="home-other-post-tag"> <?php echo "Equipment: " . get_field('benotigtes_equipment'); ?> </span>
                                         </div>
                                         <div class="home-other-post-excerpt">
                                             <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>

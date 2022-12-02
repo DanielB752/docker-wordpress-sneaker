@@ -1,7 +1,10 @@
-<?php
+<?php get_header();?>
 
-the_title();
+    <div class="page-title">
+        <h1><?php the_title(); ?></h1>
+    </div>
+    <div class="page-content">
+        <?php the_content(); ?>
+    </div>
 
-the_content();
-
-?>
+<?php get_footer(); ?>
