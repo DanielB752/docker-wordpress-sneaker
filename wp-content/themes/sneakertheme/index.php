@@ -40,9 +40,16 @@
                                         <div class="home-top-post-thumbnail">
                                             <a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a>
                                         </div>
-                                        <div class="home-top-post-title">
-                                            <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
-                                        </div>
+                                            <div class="home-top-post-pre-title">
+                                                <span>
+                                                    <a href="<?php the_permalink();?>"><?php the_field('zwischenuberschrift'); ?></a>
+                                                </span>
+                                            </div>
+                                            <div class="home-top-post-title">
+                                                <span>    
+                                                    <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
+                                                </span>
+                                            </div>
                                         <div class="home-top-post-content">                                        
                                             <div class="home-top-post-tags">
                                                 <span class="home-top-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
@@ -62,13 +69,16 @@
                                 ?>
                                     <div class="home-other-post-container">
                                         <div class="home-other-post-content">
+                                            <div class="home-other-post-pre-title">
+                                                <a href="<?php the_permalink();?>"><?php the_field('zwischenuberschrift'); ?></a>
+                                            </div>
                                             <div class="home-other-post-title">
                                                 <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
                                             </div>
-                                            <div class="home-other-post-tags">
-                                                <span class="home-other-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
-                                                <span class="home-other-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
-                                                <span class="home-other-post-tag"> <?php echo "Equipment: " . implode(', ', get_field('benotigtes_equipment')); ?> </span>
+                                            <div class="home-top-post-tags">
+                                                <span class="home-top-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "Equipment: " . implode(', ', get_field('benotigtes_equipment')); ?> </span>
                                             </div>
                                             <div class="home-other-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
@@ -119,14 +129,21 @@
                                         <div class="home-top-post-thumbnail">
                                             <a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a>
                                         </div>
-                                        <div class="home-top-post-title">
-                                            <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
-                                        </div>
+                                            <div class="home-top-post-pre-title">
+                                                <span>
+                                                    <a href="<?php the_permalink();?>"><?php the_field('zwischenuberschrift'); ?></a>
+                                                </span>
+                                            </div>
+                                            <div class="home-top-post-title">
+                                                <span>    
+                                                    <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
+                                                </span>
+                                            </div>
                                         <div class="home-top-post-content">                                        
                                             <div class="home-top-post-tags">
                                                 <span class="home-top-post-tag"> <?php echo get_field('selbst_getestet'); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "Eindruck: " . implode(get_field('mein_eindruck')); ?> </span>
-                                                <span class="home-top-post-tag"> <?php echo "€: " . implode(get_field('preis')); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "€: " . get_field('preis'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "Mein Eindruck: " . get_field('mein_eindruck'); ?> </span>
                                             </div>
                                             <div class="home-top-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
@@ -141,13 +158,16 @@
                                 ?>
                                     <div class="home-other-post-container">
                                         <div class="home-other-post-content">
+                                            <div class="home-other-post-pre-title">
+                                                <a href="<?php the_permalink();?>"><?php the_field('zwischenuberschrift'); ?></a>
+                                            </div>
                                             <div class="home-other-post-title">
                                                 <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
                                             </div>
-                                            <div class="home-other-post-tags"> 
-                                                <span class="home-other-post-tag"> <?php echo get_field('selbst_getestet'); ?> </span>
-                                                <span class="home-other-post-tag"> <?php echo "Eindruck: " . implode(get_field('mein_eindruck')); ?> </span>
-                                                <span class="home-other-post-tag"> <?php echo "€: " . implode(get_field('preis')); ?> </span>
+                                            <div class="home-top-post-tags">
+                                                <span class="home-top-post-tag"> <?php echo get_field('selbst_getestet'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "€: " . get_field('preis'); ?> </span>
+                                                <span class="home-top-post-tag"> <?php echo "Mein Eindruck: " . get_field('mein_eindruck'); ?> </span>
                                             </div>
                                             <div class="home-other-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
@@ -198,10 +218,19 @@
                                         <div class="home-top-post-thumbnail">
                                             <a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a>
                                         </div>
-                                        <div class="home-top-post-title">
-                                            <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
-                                        </div>
-                                        <div class="home-top-post-content">
+                                            <div class="home-top-post-pre-title">
+                                                <span>
+                                                    <a href="<?php the_permalink();?>"><?php the_field('zwischenuberschrift'); ?></a>
+                                                </span>
+                                            </div>
+                                            <div class="home-top-post-title">
+                                                <span>    
+                                                    <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
+                                                </span>
+                                            </div>
+                                        <div class="home-top-post-content">                                        
+                                            <div class="home-top-post-tags">
+                                            </div>
                                             <div class="home-top-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
                                             </div>
@@ -213,14 +242,17 @@
                             else
                             {
                                 ?>
-                                    <div class="home-other-post-container">
-                                        <div class="home-other-post-content">
-                                            <div class="home-other-post-title">
-                                                <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
-                                            </div>
-                                            <div class="home-other-post-excerpt">
-                                                <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
-                                            </div>
+                                    <div class="home-other-post-content">
+                                        <div class="home-other-post-pre-title">
+                                            <a href="<?php the_permalink();?>"><?php the_field('zwischenuberschrift'); ?></a>
+                                        </div>
+                                        <div class="home-other-post-title">
+                                            <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
+                                        </div>
+                                        <div class="home-other-post-tags">
+                                        </div>
+                                        <div class="home-other-post-excerpt">
+                                            <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
                                         </div>
                                     </div>
                                 <?php
