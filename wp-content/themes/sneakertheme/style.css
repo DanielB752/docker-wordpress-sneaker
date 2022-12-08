@@ -112,7 +112,13 @@ img
 
 ul, ol
 {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
+    padding: 1rem;
+}
+
+ul
+{
+    list-style-type: square;
 }
 
 li
@@ -286,10 +292,7 @@ footer
     margin-right: var(--spacing-m);
 }
 
-
-
 /* ### HOME ### */
-
 .home-cat-heading-container
 {
     border-bottom: solid var(--black) calc(var(--spacing-xs) / 2);
@@ -415,4 +418,155 @@ footer
 .page-content a
 {
     text-decoration: underline;
+}
+
+
+/* ### RATING BOX ### */
+.single-post-rating-container
+{
+    margin: var(--spacing-m) 0;
+    padding: var(--spacing-s);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.single-post-rating
+{
+    position: relative;
+    width: 100%;
+}
+
+.single-post-rating-row-1
+{
+    display: flex;
+    background-color: var(--black);
+    color: var(--white);
+    height: var(--spacing-xl);    
+    justify-content: space-between;
+}
+
+.single-post-rating-row-2
+{
+    background-color: var(--background);
+}
+
+@media screen and (min-width:720px) 
+{
+    .single-post-rating-row-2
+    {
+        display: flex;
+    }
+}
+
+.single-post-rating-row-3
+{
+    font-style: oblique;
+    padding: var(--spacing-s);
+}
+
+.single-post-rating-row-4
+{
+}
+
+.rating-grade
+{
+    padding: var(--spacing-s);    
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.rating-icon
+{
+    padding: var(--spacing-s);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.rating-pros
+{
+    list-style: none;
+}
+
+@media screen and (min-width:720px) 
+{
+    .rating-pros
+    {
+        width: 50%;
+    }
+}
+
+.rating-pros li::marker
+{
+    content: "+ ";
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.rating-cons
+{
+    list-style: none;
+    list-style-position:outside;
+}
+
+.rating-cons li::before
+{
+    margin-left: 0.5rem;
+}
+
+@media screen and (min-width:720px) 
+{
+    .rating-cons
+    {
+        width: 50%;
+    }
+}
+
+.rating-cons li::marker
+{
+    content: "– ";
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.review-button
+{
+    color: var(--white);
+    background-color: var(--cat3);
+    padding: var(--spacing-s);
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.icon-class-1
+{
+    padding: var(--spacing-s);
+    height: var(--spacing-m);
+    width: auto;
+}
+
+.icon-class-2
+{
+    padding: var(--spacing-s);
+    height: var(--spacing-m);
+    width: auto;
+}
+
+.icon-class-3
+{
+    padding: var(--spacing-s);
+    height: var(--spacing-m);
+    width: auto;
+    rotate: 270deg;
+}
+
+.icon-class-4
+{
+    padding: var(--spacing-s);
+    height: var(--spacing-m);
+    width: auto;
+    rotate: 180deg;
 }
