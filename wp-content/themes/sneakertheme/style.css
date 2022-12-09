@@ -164,6 +164,7 @@ header
 .desktop-navigation-wrapper
 {
     list-style: none;
+    padding: 0 !important;
 }
 
 .desktop-navigation-wrapper li
@@ -260,7 +261,7 @@ header
 
 footer
 {
-    margin-top: var(--spacing-xxl);
+    margin-top: var(--spacing-l);
     background-color: var(--black);
 }
 
@@ -285,6 +286,7 @@ footer
     text-decoration: none;
     font-weight: 500;
     color: var(--white);
+    font-size: 0.8rem;
 }
 
 .footer-navigation-wrapper li.menu-item:not(:last-child)
