@@ -131,6 +131,14 @@
                                             <div class="home-top-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
                                             </div>
+                                            <div class="home-post-buttons">
+                                                <div class="home-post-button-article">
+                                                    <a href="<?php echo the_permalink(); ?>" title="Weiterlesen"><button class="read-more-button">Weiterlesen</button></a>
+                                                </div>
+                                                <div class="home-post-button-shop">
+                                                    <a href="<?php echo get_field('shoplink'); ?>" target="_blank" rel="nofollow" title="<?php echo get_field('shop_button_text'); ?>"><button class="shop-more-button"><?php echo get_field('shop_button_text'); ?></button></a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 <?php

@@ -5,14 +5,16 @@
     --black: #080808;
     --white: #ffffff;
     --white-transparent: #ffffffbb;
-    --grey: darkgrey;
+    --grey: #333333;
 
     --background: #f8f8f8;
     --box-shadow: #0808080a;
 
     --cat1: #0F4C75;
     --cat2: #3282B8;
-    --cat3: #1FAB89;
+    --cat3: #19866b;
+
+    /* old cat3: #1FAB89 */
 
     --spacing-xs: 0.5rem;
     --spacing-s: 1rem;
@@ -38,7 +40,6 @@ html *
     padding: 0;
 }
 
-
 body
 {
     background-color: var(--background);
@@ -48,7 +49,6 @@ body
 }
 
 /* ### GENERAL ### */
-
 .site-content
 {
     max-width: var(--max-width);
@@ -275,7 +275,6 @@ header
 }
 
 /* ### FOOTER ### */
-
 footer
 {
     margin-top: var(--spacing-l);
@@ -347,6 +346,11 @@ footer
     padding: 0 var(--spacing-s) var(--spacing-s) var(--spacing-s);
 }
 
+.home-top-post-excerpt
+{
+    margin-bottom: var(--spacing-s);
+}
+
 .home-other-post-container
 {
     display: flex;
@@ -377,9 +381,82 @@ footer
     margin-bottom: var(--spacing-m);
 }
 
+@media screen and (min-width:720px) 
+{
+    .home-post-buttons
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .home-post-button-article
+    {
+        width: 50%;
+    }
+
+    .home-post-button-shop
+    {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:719px) 
+{
+    .home-post-buttons
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-post-button-article
+    {
+        width: 100%;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .home-post-button-shop
+    {
+        width: 100%;
+    }
+}
+
+.read-more-button
+{
+    width: 100%;
+    padding: var(--spacing-s); 
+    background-color: var(--black);
+    color: var(--white);  
+    font-size: 1rem; 
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.shop-more-button
+{
+    width: 100%;
+    padding: var(--spacing-s);        
+    background-color: var(--cat3);
+    color: var(--white); 
+    font-size: 1rem; 
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
 /* ### SINGLE ### */
-.single-post-thumbnail,
-.single-post-content,
+.single-post-thumbnail
+{
+    padding: var(--spacing-s) var(--spacing-s) var(--spacing-xs) var(--spacing-s);
+    background-color: var(--white);
+}
+
+.single-post-content
+{
+    padding: var(--spacing-xs) var(--spacing-s) var(--spacing-s) var(--spacing-s);
+    background-color: var(--white);
+}
+
 .single-post-related-items
 {
     padding: var(--spacing-s);

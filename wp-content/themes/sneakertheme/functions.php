@@ -24,4 +24,6 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'add_custom_JS' );
 
+    add_filter( 'wpo_update_plugin_json', '__return_false' );
+
 ?>

@@ -63,7 +63,7 @@
                     </div>
                     <div class="single-post-rating-row-4">
                         <div class="rating-shop-link">
-                            <a href="<?php echo get_field('shoplink'); ?>" target="_blank" rel="nofollow" title="zum Gadgetshop"><button class="review-button">zum Gadgetshop</button></a>
+                            <a href="<?php echo get_field('shoplink'); ?>" target="_blank" rel="nofollow" title="<?php echo get_field('shop_button_text'); ?>"><button class="review-button"><?php echo get_field('shop_button_text'); ?></button></a>
                         </div>
                     </div>    
                 </div>
