@@ -257,6 +257,23 @@ header
     transform: translate(0, -1.25rem) rotate(45deg);
 }
 
+/*switch between desktop and mobile menu*/
+@media screen and (min-width:720px) 
+{
+    .mobile-menu
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width:719px)
+{
+    .desktop-menu
+    {
+        display: none;
+    }
+}
+
 /* ### FOOTER ### */
 
 footer

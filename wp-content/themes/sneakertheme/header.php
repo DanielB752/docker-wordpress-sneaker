@@ -14,44 +14,32 @@
 			<div class="logo">
 				<?php the_custom_logo() ?>
 			</div>
-			<div class="menu">
-				<?php 
-					if (wp_is_mobile())
-					{
-						?>
-							<div class="mobile-menu">
-								<div id="nav-icon" class="mobile-menu-container" onclick="swapMenuIcon(this)">
-									<div class="bar1"></div>
-									<div class="bar2"></div>
-									<div class="bar3"></div>
-								</div>	
-							</div>
+			<nav class="menu">
+				<div class="mobile-menu">
+					<div id="nav-icon" class="mobile-menu-container" onclick="swapMenuIcon(this)">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</div>	
+				</div>		
+				<div class="desktop-menu">
+					<ul class="desktop-navigation-wrapper">
 						<?php
-					} 
-					else
-					{
+							wp_nav_menu(
+								array(
+									'theme_location' => 'primary',
+									'items_wrap'     => '%3$s',
+									'container'      => false,
+									'depth'          => 1,
+									'link_before'    => '<span>',
+									'link_after'     => '</span>',
+									'fallback_cb'    => false,
+								)
+							);
 						?>
-							<nav>
-								<ul class="desktop-navigation-wrapper">
-									<?php
-										wp_nav_menu(
-											array(
-												'theme_location' => 'primary',
-												'items_wrap'     => '%3$s',
-												'container'      => false,
-												'depth'          => 1,
-												'link_before'    => '<span>',
-												'link_after'     => '</span>',
-												'fallback_cb'    => false,
-											)
-										);
-									?>
-								</ul>
-							</nav>
-						<?php	
-					}
-				?>
-			</div>
+					</ul>
+				</div>					
+			</nav>
 		</div>
 	</header>
 		<?php 
