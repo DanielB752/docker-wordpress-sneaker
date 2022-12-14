@@ -6,6 +6,7 @@
 
     <!-- ### POST CONTENT ### -->
     <div class="single-post-content">
+        <p class="single-date"><?php the_date(); ?></p>
         <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
     </div>

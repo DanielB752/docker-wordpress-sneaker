@@ -45,6 +45,7 @@
                                         </div>
                                         <div class="home-top-post-content">                                        
                                             <div class="home-top-post-tags">
+                                                <span class="home-top-post-tag"> <?php the_date(); ?> </span>
                                                 <span class="home-top-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
                                                 <span class="home-top-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
                                                 <span class="home-top-post-tag"> <?php echo "Equipment: " . implode(', ', get_field('benotigtes_equipment')); ?> </span>
@@ -66,6 +67,7 @@
                                                 <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
                                             </div>
                                             <div class="home-other-post-tags">
+                                                <span class="home-other-post-tag"> <?php the_date(); ?> </span>
                                                 <span class="home-other-post-tag"> <?php echo "Schwierigkeit: " . get_field('schwierigkeitsgrad'); ?> </span>
                                                 <span class="home-other-post-tag"> <?php echo "Dauer: " . get_field('dauer') . " Min."; ?> </span>
                                                 <span class="home-other-post-tag"> <?php echo "Equipment: " . implode(', ', get_field('benotigtes_equipment')); ?> </span>
@@ -124,6 +126,7 @@
                                         </div>
                                         <div class="home-top-post-content">                                        
                                             <div class="home-top-post-tags">
+                                                <span class="home-top-post-tag"> <?php the_date(); ?> </span>
                                                 <span class="home-top-post-tag"> <?php echo get_field('selbst_getestet'); ?> </span>
                                                 <span class="home-top-post-tag"> <?php echo "Eindruck: " . implode(get_field('mein_eindruck')); ?> </span>
                                                 <span class="home-top-post-tag"> <?php echo "€: " . implode(get_field('preis')); ?> </span>
@@ -153,6 +156,7 @@
                                                 <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
                                             </div>
                                             <div class="home-other-post-tags"> 
+                                                <span class="home-other-post-tag"> <?php the_date();?> </span>
                                                 <span class="home-other-post-tag"> <?php echo get_field('selbst_getestet'); ?> </span>
                                                 <span class="home-other-post-tag"> <?php echo "Eindruck: " . implode(get_field('mein_eindruck')); ?> </span>
                                                 <span class="home-other-post-tag"> <?php echo "€: " . implode(get_field('preis')); ?> </span>
@@ -210,8 +214,16 @@
                                             <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
                                         </div>
                                         <div class="home-top-post-content">
+                                            <div class="home-top-post-tags">
+                                                <span class="home-top-post-tag"> <?php the_date(); ?></span>
+                                            </div>                                        
                                             <div class="home-top-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>
+                                            </div>
+                                            <div class="home-post-buttons">
+                                                <div class="home-post-button-article">
+                                                    <a href="<?php echo the_permalink(); ?>" title="Weiterlesen"><button class="read-more-button">Weiterlesen</button></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -225,6 +237,9 @@
                                         <div class="home-other-post-content">
                                             <div class="home-other-post-title">
                                                 <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
+                                            </div>
+                                            <div class="home-other-post-tags"> 
+                                                <span class="home-other-post-tag"> <?php the_date();?> </span>
                                             </div>
                                             <div class="home-other-post-excerpt">
                                                 <a href="<?php the_permalink();?>"><?php the_excerpt(); ?></a>

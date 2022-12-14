@@ -511,7 +511,8 @@ footer
     padding: var(--spacing-s);
 }
 
-.page-content a
+.page-content a,
+.single-post-content a
 {
     text-decoration: underline;
 }
@@ -665,4 +666,34 @@ footer
     height: var(--spacing-m);
     width: auto;
     rotate: 180deg;
+}
+
+.single-date
+{
+    font-size: 0.8rem;    
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+/* ### DISCLAIMER ### */
+
+.disclaimer
+{
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--spacing-l);
+    margin-bottom: var(--spacing-s);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.disclaimer h4
+{
+    padding: var(--spacing-s) var(--spacing-s) 0 var(--spacing-s);
+}
+
+.disclaimer p
+{
+    padding: 0 var(--spacing-s) var(--spacing-s) var(--spacing-s);
 }
