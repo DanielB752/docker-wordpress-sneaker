@@ -86,7 +86,7 @@
             if( $related->have_posts() ) 
             { 
                 ?>
-                    <h2>Weitere <?php echo get_the_category()[0]->name; ?></h2>
+                    <h2>Weitere Artikel</h2>
                     <ul class="single-post-related-items-container">
                         <?php
                             while( $related->have_posts() ) 

@@ -61,6 +61,9 @@ h1
 {
     font-size: 2rem;
     line-height: calc(1ex / 0.32);
+	hyphens: auto;
+	hyphenate-limit-chars: auto 5;
+	hyphenate-limit-lines: 2;
 }
 
 h2
@@ -68,12 +71,18 @@ h2
     font-size: 2rem;
     text-transform: uppercase;
     line-height: calc(1ex / 0.32);
+	hyphens: auto;
+	hyphenate-limit-chars: auto 5;
+	hyphenate-limit-lines: 2;
 }
 
 h3
 {
     font-size: 1.5rem;
     line-height: calc(1ex / 0.32);
+	hyphens: auto;
+	hyphenate-limit-chars: auto 5;
+	hyphenate-limit-lines: 2;
 }
 
 p
@@ -82,6 +91,9 @@ p
     margin-top: var(--spacing-xs);
     margin-bottom: var(--spacing-xs);
     line-height: calc(1ex / 0.32);
+	hyphens: auto;
+	hyphenate-limit-chars: auto 5;
+	hyphenate-limit-lines: 2;
 }
 
 strong
@@ -90,12 +102,18 @@ strong
     margin-top: var(--spacing-xs);
     margin-bottom: var(--spacing-xs);
     line-height: calc(1ex / 0.32);
+	hyphens: auto;
+	hyphenate-limit-chars: auto 5;
+	hyphenate-limit-lines: 2;
 }
 
 em
 {
     font-size: 1rem;
     line-height: calc(1ex / 0.32);
+	hyphens: auto;
+	hyphenate-limit-chars: auto 5;
+	hyphenate-limit-lines: 2;
 }
 
 a, a:active, a:visited, a:hover
@@ -125,6 +143,9 @@ li
 {
     font-size: 1rem;
     line-height: calc(1ex / 0.32);
+	hyphens: auto;
+	hyphenate-limit-chars: auto 5;
+	hyphenate-limit-lines: 2;
 }
 
 /* ### HEADER ### */
@@ -394,6 +415,11 @@ footer
         width: 50%;
     }
 
+    .home-post-button-article-no-shop-link
+    {
+        width: 100%;
+    }
+
     .home-post-button-shop
     {
         width: 50%;
@@ -463,6 +489,10 @@ footer
     background-color: var(--white);
 }
 
+.single-post-related-item
+{
+    display: inline-block;
+}
 
 .single-post-content h3,
 .single-post-content h2
@@ -474,13 +504,22 @@ footer
 .single-post-related-items-container
 {
     list-style: none;
-    columns: 1;
-    margin: 0 !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    
 }
 
-.single-post-related-item + .single-post-related-item
+@media screen and (min-width:720px) 
 {
-    margin-top: var(--spacing-m);
+    .single-post-related-items-container
+    {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+        margin: 0;
+    }    
 }
 
 @media screen and (min-width:720px) 
